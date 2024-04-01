@@ -19,6 +19,7 @@ async def fetch(session, url):
     except aiohttp.ClientError as e:
         print(f"Exceptie la {url}/contact", e)
         return None
+
 async def fetch_all(session, urls):
     tasks = []
     for index, url in enumerate(urls, 1):
